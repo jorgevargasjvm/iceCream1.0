@@ -6,6 +6,7 @@ var morgan = require('morgan');
 // parse application/x-www-form-urlencoded
 
 
+var loginRouter = require('./src/routes/login');
 
 // create application/x-www-form-urlencoded parser
 // var urlencodedParser = bodyParser.urlencoded({ extended: true })
@@ -18,6 +19,7 @@ var morgan = require('morgan');
 
 //setting
 app.use(morgan('dev'));
+app.use('/user', loginRouter);
 
 
 
